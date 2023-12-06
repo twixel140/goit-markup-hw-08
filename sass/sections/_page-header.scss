@@ -1,0 +1,111 @@
+.container--header,
+.navigation,
+.nav-menu,
+.contacts-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+}
+
+.contacts-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.nav-menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-menu__item:not(:last-child) {
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
+  }
+}
+
+.nav-menu__page,
+.contacts-menu__contact {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 31px;
+  color: $primary-black-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-menu__contact {
+  color: $primary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 31px;
+    font-size: 14px;
+  }
+}
+
+.contacts-menu__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.nav-menu__page:hover,
+.nav-menu__page:focus,
+.nav-menu__page--current,
+.contacts-menu__contact:hover,
+.contacts-menu__contact:focus {
+  color: $accent-color;
+}
+
+.nav-menu__page {
+  position: relative;
+}
+
+.nav-menu__page--current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  background-color: $accent-color;
+  border: 2px solid $accent-color;
+  border-radius: 2px;
+}
+
+.page-header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+  }
+}

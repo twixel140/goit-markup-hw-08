@@ -1,0 +1,130 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-black;
+}
+
+.footer {
+  margin-top: -60px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -165px;
+    justify-content: center;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: -12px;
+    margin-left: -87px;
+    text-align: left;
+  }
+}
+
+.address__contact {
+  color: $text-white-opacity;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-grid {
+  margin-top: 60px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 165px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 12px;
+    margin-left: 87px;
+  }
+}
+
+.footer__heading {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: $primary-white-color;
+  font-weight: 700;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+
+  &__item + &__item {
+    margin-left: 10px;
+  }
+}
+
+.social-footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $primary-white-color;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+}
+
+.social-footer__icon {
+  fill: currentColor;
+}
+
+.footer-form__input {
+  margin: 0 0 20px 0;
+  padding: 14px 16px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $primary-white-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 12px 0 0;
+    width: 358px;
+  }
+}
